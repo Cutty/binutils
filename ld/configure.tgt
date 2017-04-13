@@ -67,7 +67,10 @@ arm-*-openbsd*)		targ_emul=armnbsd ;;
 arm-*-rtems*)		targ_emul=armelf ;;
 armeb-*-elf)		targ_emul=armelfb ;;
 arm-*-elf | arm*-*-eabi*)
-	  		targ_emul=armelf ;;
+			targ_emul=armelf
+			targ_extra_emuls=armelf_fdpiceabi
+			targ_extra_libpath=$targ_extra_emuls
+			;;
 arm*-*-symbianelf*)     targ_emul=armsymbian;;
 arm-*-kaos*)		targ_emul=armelf ;;
 arm9e-*-elf)		targ_emul=armelf ;;
